@@ -10,17 +10,17 @@ Coded by Abdullah Baki Yılmaz (EEM II)
 #include <windows.h>
 
 
-float f(float x) {
+double f(double x) {
 
 	return pow(x, 3);
 }
 
-float df(float x) {
+double df(double x) {
 
 	return 3 * pow(x, 2);
 }
 
-float grad_f(float x, float a, int N) {
+double grad_f(double x, double a, int N) {
 
 	for (int i = 0; i < N; i = i + 1) {
 
@@ -32,7 +32,7 @@ float grad_f(float x, float a, int N) {
 
 int main() {
 
-	float x, a, min_x;
+	double x, a, min_x;
 
 	 x = 6;
 	 a = 0.02;
