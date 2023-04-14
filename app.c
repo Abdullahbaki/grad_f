@@ -24,8 +24,8 @@ double grad_f(double x, double a, int N) {
 
 	for (int i = 0; i < N; i = i + 1) {
 
-		 x = x - a * df(x);
-		 printf("Grad of f:% f\n", x);
+		x = x - a * df(x);
+		printf("Grad of f:% f\n", x);
 	}
 	return x;
 }
@@ -33,14 +33,20 @@ double grad_f(double x, double a, int N) {
 int main() {
 
 	double x, a, min_x;
+	int N;
+	printf("Enter value for x: ");
+	scanf_s("%lf", &x);
+	printf("Enter value for a: ");
+	scanf_s("%lf", &a);
+	printf("Enter value for N: ");
+	scanf_s("%d", &N);
+	//x = 6;
+	//a = 0.02;
+	//int N = 10;
+	min_x = grad_f(x, a, N);
 
-	 x = 6;
-	 a = 0.02;
-	 int N = 10;
-	 min_x = grad_f(x, a, N);
+	printf("Minimum gradient of f in 10 iterations: %f\n", min_x);
 
-	 printf("Minimum gradient of f in 10 iterations: %f\n", min_x);
-
-	 Sleep(10000);
-	 return 0;
+	Sleep(10000);
+	return 0;
 }
